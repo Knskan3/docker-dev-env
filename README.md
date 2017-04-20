@@ -23,7 +23,7 @@ Make sure you have your submodules updated for this repo as the docker tooling i
 
 First step is to download docker from: <https://www.docker.com/community-edition>. Make sure you execute it after install.
 
-Under `./docker-local-env` you will find a set of scripts to build and opperate your dev environment.
+Under `./docker-dev-env` you will find a set of scripts to build and opperate your dev environment.
 
 ### Config file
 
@@ -36,17 +36,17 @@ Apache will be spawned every time you run the container, under port 80. This por
 
 Your local files would be automatically map to `/var/www` under the container (the working directory). So you just need to touch files locally, and run grunt/node/whatever within the container.
 
-1. First you have to build the image. `sh ./docker-local-env/buildImage.sh`
-2. Then you are ready to work!. Next step is to run your container `sh ./docker-local-env/startContainer.sh`.
+1. First you have to build the image. `sh ./docker-dev-env/buildImage.sh`
+2. Then you are ready to work!. Next step is to run your container `sh ./docker-dev-env/startContainer.sh`.
 3. Step 2 will leave you directly inside your container terminal. If this is the first time you would like to run `npm update`.
 
 ### Start / Stop
 
-You can start the container with `sh ./docker-local-env/startContainer.sh`.
-You can stop the container with `sh ./docker-local-env/stopContainer.sh`.
+You can start the container with `sh ./docker-dev-env/startContainer.sh`.
+You can stop the container with `sh ./docker-dev-env/stopContainer.sh`.
 
 Note that you can add an extra paramenter to startContainer.sh [port] which will determinate the port exposed to the host machine. (default is 80)
 
 ### Killing container
 
-If by any reason you need to destroy your container you can use `sh ./docker-local-env/killContainer.sh`.
+If by any reason you need to destroy your container you can use `sh ./docker-dev-env/killContainer.sh`.
